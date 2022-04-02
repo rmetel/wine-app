@@ -1,3 +1,5 @@
+@import "blk-design-system-react/src/assets/css/blk-design-system-react.css";
+
 .App {
   text-align: center;
 }
@@ -36,3 +38,5 @@
     transform: rotate(360deg);
   }
 }
+
+body {background: #282c34;}
