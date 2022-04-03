@@ -39,4 +39,11 @@
   }
 }
 
-body {background: #282c34;}
+body {
+  background: #282c34;
+}
+
+.card img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}

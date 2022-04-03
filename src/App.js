@@ -8,7 +8,54 @@ function App() {
   return (
     <div className="App">
       <Nav/>
-      <Button color="primary" className="btn-simple btn-round btn btn-primary">Add to cart</Button>
+      <div className="container">
+        <div className="row mt-5">
+          <div class="col-sm-3">
+            <div className="card bg-dark">
+              <img className="card-img-top" src="wine-bottle.jpg" alt="Card image cap"/>
+              <div className="card-body">
+                <h5 className="card-title">San Marzano (Apuglien)</h5>
+                <p className="card-text">Primitivo</p>
+                <p className="card-text">14,95 €</p>
+                <a href="#" className="btn-simple btn-round btn btn-primary btn btn-primary">Hinzufügen</a>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-3">
+            <div className="card bg-dark">
+              <img className="card-img-top" src="wine-bottle.jpg" alt="Card image cap"/>
+              <div className="card-body">
+                <h5 className="card-title">San Marzano (Apuglien)</h5>
+                <p className="card-text">Primitivo</p>
+                <p className="card-text">14,95 €</p>
+                <a href="#" className="btn-simple btn-round btn btn-primary btn btn-primary">Hinzufügen</a>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-3">
+            <div className="card bg-dark">
+              <img className="card-img-top" src="wine-bottle.jpg" alt="Card image cap"/>
+              <div className="card-body">
+                <h5 className="card-title">San Marzano (Apuglien)</h5>
+                <p className="card-text">Primitivo</p>
+                <p className="card-text">14,95 €</p>
+                <a href="#" className="btn-simple btn-round btn btn-primary btn btn-primary">Hinzufügen</a>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-3">
+            <div className="card bg-dark">
+              <img className="card-img-top" src="wine-bottle.jpg" alt="Card image cap"/>
+              <div className="card-body">
+                <h5 className="card-title">San Marzano (Apuglien)</h5>
+                <p className="card-text">Primitivo</p>
+                <p className="card-text">14,95 €</p>
+                <a href="#" className="btn-simple btn-round btn btn-primary btn btn-primary">Hinzufügen</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <Footer/>
     </div>
   );

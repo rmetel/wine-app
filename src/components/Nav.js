@@ -41,22 +41,18 @@ class NavbarDocs extends React.Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="#pablo" onClick={e => e.preventDefault()}>
-                    Features
+                  <NavLink href="#red" onClick={e => e.preventDefault()}>
+                    Rotweine
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="#pablo" onClick={e => e.preventDefault()}>
-                    Pricing
+                  <NavLink href="#white" onClick={e => e.preventDefault()}>
+                    Weißweine
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink
-                    className="disabled"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
-                    Disabled
+                  <NavLink href="#sales" onClick={e => e.preventDefault()}>
+                    Angebote
                   </NavLink>
                 </NavItem>
               </Nav>
