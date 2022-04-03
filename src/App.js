@@ -11,7 +11,7 @@ function App() {
       <Nav/>
       <div className="container">
         <div className="row mt-5">
-          <div class="col-sm-3">
+          <div className="col-sm-3">
             <div className="card bg-dark">
               <Badge href="#" color="default">2017</Badge>
               <img className="card-img-top" src="wine-bottle.jpg" alt="Card image cap"/>
