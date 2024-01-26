@@ -3,7 +3,7 @@ export const Wine = ({ item }) => {
     <>
       <div className="card mb-3">
         <div className="card-img-wrapper">
-          <img className="card-img-top" src="wine-bottle.jpg" alt="bottle3" />
+          <img className="card-img-top" src="wine-bottle.png" alt="bottle3" />
         </div>
         <div className="card-body" style={{ paddingBottom: 0 }}>
           <h5 className="card-title">{item.name}</h5>
