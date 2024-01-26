@@ -23,7 +23,6 @@ export const Wine = ({ item }) => {
           </a>
           <div style={{ borderBottom: `1px solid #ddd` }}>&nbsp;</div>
         </div>
-        {/* <hr style={{ borderColor: "#777" }} /> */}
       </div>
     </>
   );
