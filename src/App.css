@@ -45,6 +45,33 @@ body {
   border: none;
 }
 
+.card-body {
+  position: relative;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body a {
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.card-body a:hover {
+  background-color: #000;
+  color: #fff !important;
+}
+
+.card .berry {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 16px;
+  left: 16px;
+}
+
 .card img {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -59,11 +86,11 @@ body {
 @media screen and (min-width: 1024px) {
   .card {
     background: transparent;
-    border-right: 1px solid #ddd;
-    border-bottom-right-radius: 0;
+    border: 1px solid #ddd;
+    border-radius: 0;
   }
 
-  .card .card-img-wrapper {
+  .card-img-wrapper {
     padding: 40px;
   }
 }
