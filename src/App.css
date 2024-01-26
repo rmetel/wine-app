@@ -42,26 +42,27 @@ body {
 }
 
 .card {
-  border: none;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 0;
 }
 
 .card-body {
   position: relative;
-  padding-bottom: 0;
   display: flex;
   flex-direction: column;
 }
 
 .card-body a {
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .card-body a:hover {
-  background-color: #000;
-  color: #fff !important;
+  background-color: #464196;
+  color: rgb(255, 255, 255, 0.9) !important;
 }
 
 .card .berry {
@@ -84,12 +85,6 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-  .card {
-    background: transparent;
-    border: 1px solid #ddd;
-    border-radius: 0;
-  }
-
   .card-img-wrapper {
     padding: 40px;
   }

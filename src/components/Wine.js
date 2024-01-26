@@ -22,7 +22,6 @@ export const Wine = ({ item }) => {
           >
             Hinzufügen
           </a>
-          <div style={{ borderBottom: `1px solid #ddd` }}>&nbsp;</div>
         </div>
       </div>
     </>
