@@ -1,69 +1,74 @@
-import logo from './logo.svg';
-import './App.css';
-import {Button} from 'reactstrap';
-import {Badge} from 'reactstrap';
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { NavBar } from "./components/Nav";
+import { Wine } from "./components/Wine";
 
-function App() {
+export const App = () => {
+  const items = [
+    {
+      id: "a",
+      name: "San Marzano (Apuglien)",
+      grape: "Primitivo",
+      price: 14.95,
+    },
+    {
+      id: "b",
+      name: "San Marzano (Apuglien)",
+      grape: "Primitivo",
+      price: 14.95,
+    },
+    {
+      id: "c",
+      name: "San Marzano (Apuglien)",
+      grape: "Primitivo",
+      price: 14.95,
+    },
+    {
+      id: "d",
+      name: "San Marzano (Apuglien)",
+      grape: "Primitivo",
+      price: 14.95,
+    },
+    {
+      id: "e",
+      name: "San Marzano (Apuglien)",
+      grape: "Primitivo",
+      price: 14.95,
+    },
+    {
+      id: "f",
+      name: "San Marzano (Apuglien)",
+      grape: "Primitivo",
+      price: 14.95,
+    },
+    {
+      id: "g",
+      name: "San Marzano (Apuglien)",
+      grape: "Primitivo",
+      price: 14.95,
+    },
+    {
+      id: "h",
+      name: "San Marzano (Apuglien)",
+      grape: "Primitivo",
+      price: 14.95,
+    },
+  ];
+
   return (
     <div className="App">
-      <Nav/>
-      <div className="container">
+      <NavBar />
+
+      <div className="container" style={{ marginTop: 100 }}>
         <div className="row mt-5">
-          <div className="col-sm-3">
-            <div className="card bg-dark">
-              <Badge href="#" color="default">2017</Badge>
-              <img className="card-img-top" src="wine-bottle.jpg" alt="Card image cap"/>
-              <div className="card-body">
-                <h5 className="card-title">San Marzano (Apuglien)</h5>
-                <p className="card-text">Primitivo</p>
-                <p className="card-text">14,95 €</p>
-                <a href="#" className="btn-simple btn-round btn btn-primary btn btn-primary">Hinzufügen</a>
-              </div>
+          {items.map((item) => (
+            <div key={item.id} className="col-sm-3 col-lg-3">
+              <Wine item={item} />
             </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card bg-dark">
-              <Badge href="#" color="default">2014</Badge>
-              <img className="card-img-top" src="wine-bottle.jpg" alt="Card image cap"/>
-              <div className="card-body">
-                <h5 className="card-title">San Marzano (Apuglien)</h5>
-                <p className="card-text">Primitivo</p>
-                <p className="card-text">14,95 €</p>
-                <a href="#" className="btn-simple btn-round btn btn-primary btn btn-primary">Hinzufügen</a>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card bg-dark">
-              <Badge href="#" color="default">2015</Badge>
-              <img className="card-img-top" src="wine-bottle.jpg" alt="Card image cap"/>
-              <div className="card-body">
-                <h5 className="card-title">San Marzano (Apuglien)</h5>
-                <p className="card-text">Primitivo</p>
-                <p className="card-text">14,95 €</p>
-                <a href="#" className="btn-simple btn-round btn btn-primary btn btn-primary">Hinzufügen</a>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card bg-dark">
-              <Badge href="#" color="default">2018</Badge>
-              <img className="card-img-top" src="wine-bottle.jpg" alt="Card image cap"/>
-              <div className="card-body">
-                <h5 className="card-title">San Marzano (Apuglien)</h5>
-                <p className="card-text">Primitivo</p>
-                <p className="card-text">14,95 €</p>
-                <a href="#" className="btn-simple btn-round btn btn-primary btn btn-primary">Hinzufügen</a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-      <Footer/>
+      {/* <Footer /> */}
     </div>
   );
-}
-
-export default App;
+};
