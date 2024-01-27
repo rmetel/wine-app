@@ -1,3 +1,30 @@
+.urbanist-200 {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.urbanist-300 {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.urbanist-400 {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pacifico {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
 }
@@ -83,6 +110,42 @@ body {
   top: 15px;
   right: 15px;
 }
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  position: absolute;
+  content: "";
+  width: calc(100% - 10px);
+  height: 3px;
+  background: #464196;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link.active::before,
+.nav-link:hover::before {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* .nav-link {
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid #464196;
+} */
 
 @media screen and (min-width: 1024px) {
   .card-img-wrapper {

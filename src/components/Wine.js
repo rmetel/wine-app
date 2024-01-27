@@ -7,10 +7,15 @@ export const Wine = ({ item }) => {
           <img className="card-img-top" src="wine-bottle.png" alt="bottle3" />
         </div>
         <div className="card-body">
-          <h5 className="card-title">{item.name}</h5>
-          <p className="card-text">{item.grape}</p>
-          <p className="card-text">{item.price} €</p>
+          <h5 className="card-title urbanist-300">
+            <strong>{item.name}</strong>
+          </h5>
+          <p className="card-text urbanist-300">
+            <strong>{item.grape}</strong>
+          </p>
+          <p className="card-text urbanist-300">{item.price} €</p>
           <a
+            className="urbanist-400"
             href="/abc"
             style={{
               borderRadius: 0,
