@@ -135,18 +135,6 @@ body {
   opacity: 1;
 }
 
-/* .nav-link {
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-  border-bottom: 2px solid transparent;
-}
-
-.nav-link:hover {
-  border-bottom: 3px solid #464196;
-} */
-
 @media screen and (min-width: 1024px) {
   .card-img-wrapper {
     padding: 40px;
