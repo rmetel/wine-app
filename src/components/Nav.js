@@ -17,15 +17,14 @@ export const NavBar = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto"></Nav>
+          <Nav>
             <Nav.Link href="#red" className="urbanist-400">
               <strong>Rotweine</strong>
             </Nav.Link>
             <Nav.Link href="#white" className="urbanist-400">
               <strong>Weißweine</strong>
             </Nav.Link>
-          </Nav>
-          <Nav>
             <Nav.Link href="#deets" className="urbanist-400">
               <strong>Kontakt</strong>
             </Nav.Link>
