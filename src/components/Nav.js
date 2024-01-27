@@ -26,10 +26,12 @@ export const NavBar = () => {
               <strong>Weißweine</strong>
             </Nav.Link>
             <Nav.Link href="#deets" className="urbanist-400">
-              <strong>Kontakt</strong>
+              <strong>Angebote</strong>
             </Nav.Link>
-            <Nav.Link href="#memes">
-              <strong>Impressum</strong>
+            <Nav.Link to="/cart">
+              <i className="bi bi-cart3"></i>
+              &nbsp;
+              <strong className="urbanist-400">({3})</strong>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

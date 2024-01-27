@@ -2,6 +2,7 @@ export const Wine = ({ item }) => {
   return (
     <>
       <div className="card mb-3">
+        <i className="bi bi-airplane"></i>
         <img className="berry" src="blueberry.png" alt="blueberry" />
         <div className="card-img-wrapper">
           <img className="card-img-top" src="wine-bottle.png" alt="bottle3" />
