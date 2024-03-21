@@ -28,7 +28,7 @@ export const NavBar = () => {
             <Nav.Link href="#deets" className="urbanist-400">
               <strong>Angebote</strong>
             </Nav.Link>
-            <Nav.Link to="/cart">
+            <Nav.Link href="/cart">
               <i className="bi bi-cart3"></i>
               &nbsp;
               <strong className="urbanist-400">({3})</strong>

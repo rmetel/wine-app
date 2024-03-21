@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { NavBar } from "./components/Nav";
-import { Wine } from "./components/Wine";
+import { NavBar, WineCard } from "./components";
 
 export const App = () => {
   const items = [
@@ -63,7 +62,7 @@ export const App = () => {
         <div className="row mt-5">
           {items.map((item) => (
             <div key={item.id} className="col-sm-3 col-lg-3">
-              <Wine item={item} />
+              <WineCard item={item} />
             </div>
           ))}
         </div>
