@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-export const NavBar = () => {
+export const NavBar: React.FC = () => {
   return (
     <Navbar
       collapseOnSelect
