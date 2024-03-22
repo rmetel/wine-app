@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/esm/Container";
 import Nav from "react-bootstrap/esm/Nav";
 import Navbar from "react-bootstrap/esm/Navbar";
-import React from "react";
+import React, { useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { showToast } from "~/helpers";
 
@@ -11,13 +11,18 @@ interface NavBarProps {
 }
 
 export const NavBar: React.FC<NavBarProps> = ({ token, setToken }) => {
-  const [, , removeCookies] = useCookies(["jwt-token"]);
+  const [cookies, , removeCookies] = useCookies(["jwt-token"]);
 
   const handleLogout = () => {
     removeCookies("jwt-token");
     setToken(undefined);
     showToast("Sie wurden erfolgreich abgemeldet!", "info");
   };
+
+  useEffect(() => {
+    const jwtToken = cookies["jwt-token"] ?? null;
+    setToken(jwtToken);
+  }, []);
 
   return (
     <Navbar

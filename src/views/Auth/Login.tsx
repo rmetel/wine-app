@@ -20,12 +20,6 @@ export const Login: React.FC<LoginProps> = ({ token, setToken }) => {
 
   const apiUrl = getApiUrl();
 
-  useEffect(() => {
-    const jwtToken = cookies["jwt-token"] ?? null;
-    setToken(jwtToken);
-    setUsername(jwtToken ? (jwtDecode(jwtToken) as JwtToken).username : "");
-  }, []);
-
   const addOneDay = () => {
     const currentDate = new Date();
     const nextDay = new Date(currentDate);
@@ -49,6 +43,12 @@ export const Login: React.FC<LoginProps> = ({ token, setToken }) => {
         showToast(`${error.name}: ${error.message}`, "error");
       });
   };
+
+  useEffect(() => {
+    const jwtToken = cookies["jwt-token"] ?? null;
+    setToken(jwtToken);
+    setUsername(jwtToken ? (jwtDecode(jwtToken) as JwtToken).username : "");
+  }, []);
 
   if (token) {
     return <>{`Hallo ${username}!`}</>;
