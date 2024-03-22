@@ -61,11 +61,11 @@ export const NavBar: React.FC<NavBarProps> = ({ token, setToken }) => {
                     e.preventDefault();
                     handleLogout();
                   }}
+                  title="Logout"
                 >
                   <i
                     className="bi bi-box-arrow-in-right"
                     style={{ fontSize: 18 }}
-                    title="Logout"
                   ></i>
                 </Nav.Link>
               </>
