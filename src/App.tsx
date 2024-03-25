@@ -1,7 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import { NavBar } from "./components";
-import { Home, Login } from "./views";
+import { Home, Login, Register } from "./views";
 import { useState } from "react";
 
 export const App = () => {
@@ -19,6 +19,7 @@ export const App = () => {
               path="/login"
               element={<Login token={token} setToken={setToken} />}
             />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </Router>
       </div>
