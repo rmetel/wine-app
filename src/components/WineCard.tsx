@@ -1,4 +1,10 @@
-export const Wine = ({ item }) => {
+import { Wine } from "~/models";
+
+interface WineProps {
+  item: Wine;
+}
+
+export const WineCard: React.FC<WineProps> = ({ item }) => {
   return (
     <>
       <div className="card mb-3">
