@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { jwtDecode } from "jwt-decode";
 import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
@@ -39,8 +39,11 @@ export const Login: React.FC<LoginProps> = ({ token, setToken }) => {
           showToast("Sie haben sich erfolgreich eingeloggt!", "success");
         }
       })
-      .catch((error) => {
-        showToast(`${error.name}: ${error.message}`, "error");
+      .catch((error: AxiosError) => {
+        showToast(
+          `${error.response?.statusText}: ${(error.response?.data as { message: string }).message}`,
+          "error",
+        );
       });
   };
 
@@ -59,9 +62,9 @@ export const Login: React.FC<LoginProps> = ({ token, setToken }) => {
       <div className="col-12 mb-3">
         <h2>Login</h2>
       </div>
-      <Col md={{ span: 6, offset: 3 }}>
+      <Col md={{ span: 4, offset: 4 }}>
         <div className="row">
-          <Form>
+          <Form style={{ background: "#fff", borderRadius: 4, padding: 15 }}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Username</Form.Label>
               <Form.Control
@@ -92,6 +95,12 @@ export const Login: React.FC<LoginProps> = ({ token, setToken }) => {
             >
               Login
             </Button>
+
+            <hr />
+
+            <a href="/register" className="link-secondary">
+              Registrieren
+            </a>
           </Form>
         </div>
       </Col>
