@@ -4,7 +4,7 @@ export const showToast = (
   message: string,
   type: "success" | "error" | "info",
 ) => {
-  let color = "";
+  let color;
 
   switch (type) {
     case "info":
@@ -36,13 +36,3 @@ export const getApiUrl = () => {
 };
 
 // export const scrollToTop = $("html, body").animate({ scrollTop: 0 }, "slow");
-
-export const buildUrl = (basePath: string, path: string) => {
-  if (path.startsWith("/")) {
-    path = path.slice(1, path.length);
-  }
-
-  return basePath.endsWith("/")
-    ? basePath.concat(path)
-    : basePath.concat("/").concat(path);
-};
