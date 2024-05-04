@@ -10,15 +10,18 @@ RUN npm install -g serve
 
 RUN npm run build
 
-EXPOSE 3000
+RUN apk add nano
 
-ENTRYPOINT ["serve", "-s", "build"]
+RUN apk add curl
+
+EXPOSE 3002
+
+ENTRYPOINT ["serve", "-s", "build", "-l", "3002"]
 
 # terminal
 # docker build -t wine-app -f docker/wine-app/wine-app.dockerfile .
 # docker run --name wine-app -dp 3000:3000 wine-app
 
 # docker hub
-# docker build -t ddrram/wine-app:1.0.0 -f docker/wine-app/wine-app.dockerfile .
-# docker push ddrram/wine-app:1.0.0
-# docker run --name wine-app -dp 3000:3000 ddrram/wine-app:1.0.0
+# docker build -t ddrram/wine-app:1.0.2 -f docker/wine-app/wine-app.dockerfile .
+# docker push ddrram/wine-app:1.0.2
