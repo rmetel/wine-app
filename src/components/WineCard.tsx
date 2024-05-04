@@ -9,9 +9,13 @@ export const WineCard: React.FC<WineProps> = ({ item }) => {
     <>
       <div className="card mb-3">
         <i className="bi bi-airplane"></i>
-        <img className="berry" src="blueberry.png" alt="blueberry" />
+        <img className="berry" src="/wine-app/blueberry.png" alt="blueberry" />
         <div className="card-img-wrapper">
-          <img className="card-img-top" src="wine-bottle.png" alt="bottle3" />
+          <img
+            className="card-img-top"
+            src="/wine-app/wine-bottle.png"
+            alt="bottle3"
+          />
         </div>
         <div className="card-body">
           <h5 className="card-title urbanist-300">

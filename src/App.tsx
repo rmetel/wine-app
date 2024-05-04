@@ -12,7 +12,7 @@ export const App = () => {
       <NavBar token={token} setToken={setToken} />
 
       <div className="container" style={{ marginTop: 100 }}>
-        <Router>
+        <Router basename="/wine-app">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route
